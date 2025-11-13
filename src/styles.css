@@ -1,0 +1,18 @@
+:root{
+  --brand:#6200ee;
+  --bg:#f5f5f5;
+}
+
+body,html,#root{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+
+.app-header{background:var(--brand);color:white;padding:12px}
+.app-header nav{display:flex;gap:12px}
+.app-header a{color:white;text-decoration:none;font-weight:600}
+
+.app-main{padding:24px;background:var(--bg);min-height:calc(100vh - 60px)}
+
+.screen{max-width:720px;margin:0 auto;background:white;padding:24px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.center{text-align:center}
+.form{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.form input{padding:8px;border:1px solid #ddd;border-radius:4px}
+button{background:var(--brand);color:white;border:none;padding:10px 14px;border-radius:6px;cursor:pointer}
