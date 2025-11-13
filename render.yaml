@@ -1,0 +1,18 @@
+# Render infrastructure file for Web static site
+# Replace `repo` and `branch` with your repository details before using.
+services:
+  - type: static_site
+    name: emerging-modweb-web
+    env: static
+    repo: https://github.com/Camatis/emerging-web.git
+    branch: main
+    buildCommand: "npm install && npm run build"
+    publishPath: Web/dist
+    envVars:
+      - key: VITE_API_URL
+        # Leave value blank here and set on Render dashboard, or fill with your production API.
+        value: ""
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
