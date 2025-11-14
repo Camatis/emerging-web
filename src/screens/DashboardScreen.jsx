@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthStore } from '../store/useAuthStore'
+import FeatureCard from '../components/FeatureCard'
 
 export default function DashboardScreen(){
   const navigate = useNavigate()
@@ -48,22 +49,10 @@ export default function DashboardScreen(){
             </div>
 
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-background border border-border rounded">
-                <div className="text-base font-medium text-foreground mb-1" data-testid="stat-projects">Low-cost</div>
-                <div className="text-sm text-foreground">Accessible Hardware</div>
-              </div>
-              <div className="text-center p-6 bg-background border border-border rounded">
-                <div className="text-base font-medium text-foreground mb-1" data-testid="stat-clients">Dual-Camera</div>
-                <div className="text-sm text-foreground">Vision System</div>
-              </div>
-              <div className="text-center p-6 bg-background border border-border rounded">
-                <div className="text-base font-medium text-foreground mb-1" data-testid="stat-experience">Non-Destructive</div>
-                <div className="text-sm text-foreground">Fruit Analysis</div>
-              </div>
-              <div className="text-center p-6 bg-background border border-border rounded">
-                <div className="text-base font-medium text-foreground mb-1" data-testid="stat-satisfaction">Real-Time</div>
-                <div className="text-sm text-foreground">Fruit Classification</div>
-              </div>
+              <FeatureCard title="Low-cost" subtitle="Accessible Hardware" testId="stat-projects" />
+              <FeatureCard title="Dual-Camera" subtitle="Vision System" testId="stat-clients" />
+              <FeatureCard title="Non-Destructive" subtitle="Fruit Analysis" testId="stat-experience" />
+              <FeatureCard title="Real-Time" subtitle="Fruit Classification" testId="stat-satisfaction" />
             </div>
           </div>
         </div>
